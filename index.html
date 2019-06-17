@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <title>WebMail - Registro</title>
+	<link rel="icon" type="image/png" href="icono.png">
+    <link rel="stylesheet" href="/estilos/estilos.css">
+    <script src="validar.js"></script>
+</head>
+<body>
+    <form action="registro.php" method="POST" class="form-register" onsubmit="return validar();">
+        <h2 class="form-titulo">Crea tu cuenta de usuario</h2>
+        <div class="contenedor-inputs">
+            <input type="text" id="nombre" name="nombre" placeholder="Nombre"  class="input-48" >
+            <input type="text" id="usuario" name="usuario" placeholder="Nombre de usuario"  class="input-48" >
+            <input type="password" id="clave" name="clave" placeholder="Clave"  class="input-48" >
+            <input type="password" id="reclave" name="reclave" placeholder="Confirme la Clave"  class="input-48" >
+            <input type="text" id="telefono" name="telefono" placeholder=" Nº Teléfono" class="input-48">           
+            <input type="submit" value="Registrarse" class="btn-enviar">
+            <p class="form-link">¿Ya tiene una cuenta? <a href="../login/login.html">Ingrese aquí</a></p>
+        </div>
+    </form>
+</body>
+</html>
