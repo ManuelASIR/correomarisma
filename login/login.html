@@ -1,0 +1,25 @@
+<?php
+session_start();
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <title>WebMail - Login</title>
+	<link rel="icon" type="image/png" href="../icono.png">
+    <link rel="stylesheet" href="../estilos/estilos.css">
+	<script src="validar_login.js"></script>
+</head>
+<body>
+    <form action="login.php" method="POST" class="form-register" onsubmit="return validar_login();">
+        <h2 class="form-titulo">Inicia sesión</h2>
+        <div class="contenedor-inputs">
+            <input type="text" name="usuario" id="usuario" placeholder="&#9000; Usuario">
+            <input type="password" name="clave" id="clave" placeholder="&#128272; Clave">
+            <input type="submit" value="Entrar" class="btn-enviar">
+            <p class="form-link">¿No tiene niguna cuenta? <a href="../index.html">Registrese aquí</a></p>
+        </div>
+    </form>
+</body>
+</html>

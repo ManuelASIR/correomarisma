@@ -1,0 +1,37 @@
+<?php
+// SE INICIA LA SESION 
+
+session_start();
+// CREO VARIABLE PARA GUARDAR SESION DE USUARIO
+$varsesion = $_SESSION['usuario'];
+
+// SI LA SESION ES NULA O ESTA VACIA DEVUELVE A PAGINA DE LOGIN
+// PORQUE NO HAS INICIADO SESION
+if ($varsesion == null || $varsesion == ''){
+	echo "NO TIENES AUTORIZACION";
+	die;
+}
+?>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <title>WebMail - LoginCorreo @</title>
+	<link rel="icon" type="image/png" href="../icono.png">
+    <link rel="stylesheet" href="../estilos/estilos.css">
+	<script src="validar.js"></script>
+</head>
+<body>
+    <form action="validar_correo.php" method="POST" class="form-register" onsubmit="return validar();">
+        <h2 class="form-titulo">Inicia sesión con tu correo electronico</h2>
+        <div class="contenedor-inputs">
+            <input type="text" name="username" id="username" placeholder="Correo electronico">
+            <input type="password" name="password" id="password" placeholder="Contraseña">
+            <input type="submit" value="Entrar" class="btn-enviar">
+            <p class="form-link"> <a href="../index.html">Volver a la pagina principal</a></p>
+        </div>
+    </form>
+</body>
+</html>

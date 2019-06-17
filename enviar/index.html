@@ -1,0 +1,21 @@
+<html>
+<head>
+    <link rel="stylesheet" href="../estilos/estilos.css">
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<script src="validar.js"></script>
+	<link rel="icon" type="image/png" href="../icono.png">
+	<title>WebMail - Envia Mensajes</title>
+</head>
+<body>
+     <form action="../enviar/action.php" method="POST" class="form-register" onsubmit="return validar();">
+	 <h2 class="form-titulo">Envío de correo electronico</h2>
+		<div class='contenedor-inputs'>
+			<input type='text' placeholder='Destinatario:' name="destinatario" class="input-48" />
+			<input type='text' placeholder='Asunto:' name="asunto" class="input-48"/>
+			<textarea  name="cuerpo" class="textarea" rows="10" cols="40"  placeholder="Escribe aquí el mensaje" ></textarea>
+			<input type='submit' class="btn-enviar"/>
+			<p class="form-link"><a href="../inicio/login_correo.html">Volver a Login Correo</a></p>
+	 	</div>  
+	</form>
+</body>
+</html>
